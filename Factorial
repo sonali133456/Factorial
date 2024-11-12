@@ -1,3 +1,5 @@
+// factorial code 
+
 import java.util.Scanner;
 class Factorial {
 public static void main(String[] args) {
@@ -10,5 +12,69 @@ for(i=1;i<=n;i++){
 f=f*i;
 }
 System.out.print("factorial="+f);
+}
+}
+
+
+
+//Sum and Average
+
+Program :
+import java.util.Scanner;
+class sumavg{
+public static void main(String[] args) {
+System.out.print("Enter how many Number to calculate Sum and Average of:");
+Scanner sc=new Scanner(System.in);
+int n= sc.nextInt();
+double sum=0;
+int a[]=new int[n];
+System.out.println("Enter"+n+"numbers");
+for(int i=0;i<n;i++){
+a[i]=sc.nextInt();
+}
+for(int i=0;i<n;i++){
+sum=sum+a[i];
+}
+System.out.println("sum= "+ sum);
+System.out.println("Average="+ sum/n);
+}
+}
+
+//prime number
+
+Program :
+import java.util.Scanner;
+public class Java{
+public static void main(String[] args){
+Scanner s=new Scanner(System.in);
+System.out.print("Enter the Number of Prime Numbers :");
+int n=s.nextInt();
+int count=0;
+int num=2;
+while(count<n){
+if(isPrime(num)){
+System.out.print(num +" ");
+count++;
+}
+num++;
+}
+s.close();
+}
+public static boolean isPrime(int num){
+if(num<=1){
+return false;
+}
+if (num<=3){
+return true;
+}
+if(num%2==0||num%3==0){
+return false;
+}
+for(int i=5;i*i<=num;i+=6){
+if(num%i==0 ||num%(i+2)==0){
+return false;
+}
+}
+return true;
 }
 }
